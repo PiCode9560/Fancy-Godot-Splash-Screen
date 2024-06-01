@@ -1,0 +1,378 @@
+[gd_scene load_steps=13 format=3 uid="uid://dmc3211ce0u8"]
+
+[ext_resource type="Script" path="res://splash_screen.gd" id="1_j22nu"]
+[ext_resource type="Texture2D" uid="uid://dag3il6sf5j4t" path="res://Simplified Godot logo.png" id="2_670cf"]
+[ext_resource type="FontFile" uid="uid://c77d008armd0o" path="res://FredokaOne-Regular.ttf" id="2_xekek"]
+[ext_resource type="FontFile" uid="uid://ch8idq3p3je4g" path="res://RobotoCondensed-Medium.ttf" id="4_lwk4g"]
+
+[sub_resource type="Curve" id="Curve_kk8al"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.732997, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_hmxps"]
+interpolation_mode = 1
+colors = PackedColorArray(0.317647, 0.623529, 0.85098, 1, 1, 1, 1, 0)
+
+[sub_resource type="Curve2D" id="Curve2D_6trfv"]
+_data = {
+"points": PackedVector2Array(-8.69775, 14.0067, 11.9888, -15.0926, 742.153, 289.972, -8.69775, 14.0067, -13.2921, -22.6278, 774.192, 244.224, 17.4084, 18.735, -16.1453, 8.12673, 727.206, 182.64, 14.8116, -9.79677, -7.41168, -7.36699, 680.566, 209.77, 8.19965, 6.2991, -8.05617, -6.47081, 656.607, 190.078, 8.61127, 5.5276, 2.56386, -19.0925, 630.861, 173.335, -0.510437, 19.6171, -22.2186, -11.1822, 635.203, 115.83, 23.9662, 5.32532, -9.56861, 16.0818, 565.325, 91.9079, 7.62103, -17.025, -9.03702, -1.51009, 539.385, 142.43, 9.09113, 0.1082, 0, 0, 512.178, 140.252, 0, 0, -0.0635, 0, 512.178, 140.238, 0.0540771, 0, -0.0564, 0, 512.001, 140.252, 0.0564575, 0, 0, 0, 511.829, 140.238, 0, 0, -9.10759, 0.1082, 511.829, 140.252, 9.03937, -1.51009, -7.61632, -17.025, 484.611, 142.43, 9.58273, 16.0818, -23.9545, 5.32531, 458.666, 91.9079, 22.2162, -11.1822, 0.50807, 19.6171, 388.799, 115.83, -2.57092, -19.0925, -8.62775, 5.52759, 393.147, 173.335, 8.0585, -6.47081, -8.18789, 6.2991, 367.393, 190.078, 7.41403, -7.36699, -14.8116, -9.79678, 343.428, 209.77, 16.15, 8.12672, -17.4084, 18.735, 296.79, 182.64, 13.2968, -22.6278, 10.4499, 16.4033, 249.808, 244.224, -10.3802, -12.8572, 0, 0, 281.847, 289.972, 0, 0, 0, 0, 281.847, 401.733, 0, 0, 0, 0, 281.847, 415.928, 0, 0, 0, 0, 281.847, 443.547, 0, 0, 0, 80.8534, 281.847, 466.252, -127.431, -0.446899, 0, 0, 511.844, 586.415, 0, 0, 0, 0, 512, 586.415, 0, 0, 127.431, -0.44691, 512.157, 586.415, 0, 80.8534, 0, -1.82763, 742.119, 466.252, -0.0376587, 8.23257, 0, 0, 742.267, 437.798, 0, 0, 0, 0, 660.089, 445.179, 0, 0, -0.31754, 4.5538, 657.452, 482.962, 4.55377, -0.326935, 0, 0, 648.959, 491.467, 0, 0, -0.22116, 0.0158, 569.572, 497.938, 0.21875, 0, -4.50674, 0, 568.911, 497.962, 0.665649, 4.52557, 0, 0, 559.85, 490.129, 0, 0, 0, 0, 554.65, 454.86, 0, 0, 0, 0, 469.352, 454.86, 0, 0, -0.69859, 4.74667, 464.151, 490.129, 4.77658, 0.389313, 0, 0, 454.43, 497.938, 0, 0, -4.5538, -0.32695, 375.043, 491.467, 0.317535, 4.5538, 0, 0, 366.55, 482.962, 0, 0, 0, 0, 363.913, 445.179, 0, 0, 0, 0, 324.391, 440.841)
+}
+point_count = 46
+
+[sub_resource type="SphereMesh" id="SphereMesh_e2el4"]
+radius = 15.0
+height = 30.0
+
+[sub_resource type="Animation" id="Animation_aa0kd"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Path2D/PathFollow2D:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera2D:zoom")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Line2D:gradient:offsets")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [PackedFloat32Array(0, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MeshInstance2D:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("MeshInstance2D2:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Line2D:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Path2D/PathFollow2D/MeshInstance2D:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Label:scale")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Label2:scale")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_trn3h"]
+resource_name = "splash screen"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Path2D/PathFollow2D:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1, 4),
+"transitions": PackedFloat32Array(2.21914, 1),
+"update": 0,
+"values": [0.0, 0.999]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera2D:zoom")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1, 4.2),
+"transitions": PackedFloat32Array(2.21914, 1),
+"update": 0,
+"values": [Vector2(10, 10), Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Line2D:gradient:offsets")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.9, 4),
+"transitions": PackedFloat32Array(2.31, 1),
+"update": 0,
+"values": [PackedFloat32Array(0, 0), PackedFloat32Array(0, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MeshInstance2D:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 4.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("MeshInstance2D2:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 4.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Line2D:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Path2D/PathFollow2D/MeshInstance2D:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.2, 0.6),
+"transitions": PackedFloat32Array(0.450625, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Label:scale")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(4.6, 4.8),
+"transitions": PackedFloat32Array(0.353553, 1),
+"update": 0,
+"values": [Vector2(1, 0), Vector2(1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Label2:scale")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(4.7, 4.9),
+"transitions": PackedFloat32Array(0.353553, 0.517632),
+"update": 0,
+"values": [Vector2(1, 0), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_b63uq"]
+_data = {
+"RESET": SubResource("Animation_aa0kd"),
+"splash screen": SubResource("Animation_trn3h")
+}
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_7hv03"]
+height = 1.9
+
+[node name="splash screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_j22nu")
+animation_curve = SubResource("Curve_kk8al")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1569.0
+offset_top = -1076.0
+offset_right = 1569.0
+offset_bottom = 1076.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.141176, 0.141176, 0.141176, 1)
+
+[node name="SimplifiedGodotIcon3" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(577, 315)
+scale = Vector2(0.471, 0.455)
+texture = ExtResource("2_670cf")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="Node2D" type="Node2D" parent="CenterContainer/Control"]
+scale = Vector2(0.475, 0.475)
+
+[node name="Camera2D" type="Camera2D" parent="CenterContainer/Control/Node2D"]
+position = Vector2(-512, -585.5)
+
+[node name="Line2D" type="Line2D" parent="CenterContainer/Control/Node2D"]
+position = Vector2(-512, -585.5)
+width = 30.0
+gradient = SubResource("Gradient_hmxps")
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+antialiased = true
+
+[node name="Path2D" type="Path2D" parent="CenterContainer/Control/Node2D"]
+position = Vector2(-512, -585.5)
+curve = SubResource("Curve2D_6trfv")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="CenterContainer/Control/Node2D/Path2D"]
+position = Vector2(742.153, 289.972)
+rotation = -0.899509
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="CenterContainer/Control/Node2D/Path2D/PathFollow2D"]
+modulate = Color(0.317647, 0.623529, 0.85098, 1)
+mesh = SubResource("SphereMesh_e2el4")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CenterContainer/Control/Node2D"]
+libraries = {
+"": SubResource("AnimationLibrary_b63uq")
+}
+autoplay = "splash screen"
+
+[node name="Label" type="Label" parent="CenterContainer/Control/Node2D"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -427.5
+offset_top = 82.1053
+offset_right = 427.5
+offset_bottom = 367.105
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.933333, 0.933333, 0.933333, 1)
+theme_override_fonts/font = ExtResource("2_xekek")
+theme_override_font_sizes/font_size = 235
+text = "GODOT"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="CenterContainer/Control/Node2D"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -427.5
+offset_top = 267.368
+offset_right = 427.5
+offset_bottom = 552.368
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.933333, 0.933333, 0.933333, 1)
+theme_override_fonts/font = ExtResource("4_lwk4g")
+theme_override_font_sizes/font_size = 115
+text = "Game engine"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="CenterContainer/Control/Node2D"]
+modulate = Color(0.317647, 0.623529, 0.85098, 1)
+position = Vector2(-107.368, -248.421)
+scale = Vector2(32.6623, 37.1916)
+mesh = SubResource("CapsuleMesh_7hv03")
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="CenterContainer/Control/Node2D"]
+modulate = Color(0.317647, 0.623529, 0.85098, 1)
+position = Vector2(107.368, -248.421)
+scale = Vector2(32.6623, 37.1916)
+mesh = SubResource("CapsuleMesh_7hv03")
